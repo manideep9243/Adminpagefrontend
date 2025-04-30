@@ -1,5 +1,4 @@
-// Connect to Socket.IO server
-const socket = io('http://localhost:5000'); // Change to 'https://adminbackend-axxb.onrender.com' for deployed backend
+const socket = io('https://adminpagebackend.onrender.com'); 
 
 // Log WebSocket connection status
 socket.on('connect', () => {
@@ -102,7 +101,7 @@ document.getElementById('uploadButton').addEventListener('click', async () => {
     uploadStatus.className = 'status-message';
     progressContainer.className = 'progress-container visible';
 
-    const response = await fetch('http://localhost:5000/admin/upload', { // Change to 'https://adminbackend-axxb.onrender.com/admin/upload' for deployed backend
+    const response = await fetch('https://adminpagebackend.onrender.com/admin/upload', {
       method: 'POST',
       body: formData,
     });
