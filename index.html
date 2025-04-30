@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page - Results Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="navbar-logo">
+      <img src="GNI.png" alt="Logo">
+      <div class="navbar-title">Guru Nanak Institutions</div>
+    </div>
+  </nav>
+
+  <div class="admin-container">
+    <h1>Admin Portal</h1>
+    <p>Upload a CSV or Excel file to update student results.</p>
+
+    <div class="upload-section">
+      <input type="file" id="fileInput" accept=".csv, .xlsx, .xls" />
+      <button id="uploadButton">Upload</button>
+    </div>
+
+    <p id="uploadStatus" class="status-message"></p>
+  </div>
+
+  <div id="progressContainer" class="progress-container hidden">
+    <progress id="progressBar" value="0" max="100"></progress>
+    <p id="statusText"></p>
+  </div>
+
+  <div class="watermark">Copyright © -AIML@GNITC</div>
+
+  <!-- Socket.IO client library -->
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <!-- Custom script -->
+  <script src="admin.js"></script>
+</body>
+</html>
